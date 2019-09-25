@@ -20,6 +20,7 @@ const connect = function () {
     console.log(data);
   });
 
+  // when the server recieves a message with 'Name: xxx' format, it knows to create a new name associated with our connection
   conn.write('Name: OaA');
 
   return conn;
