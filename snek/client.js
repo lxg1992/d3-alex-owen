@@ -20,6 +20,8 @@ const connect = function () {
     console.log(data);
   });
 
+  conn.write('Name: OaA');
+
   return conn;
 };
 
