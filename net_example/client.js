@@ -14,3 +14,5 @@ conn.on('data', (data) => {
 conn.on('connect', () => {
   conn.write('Hello from client!');
 });
+
+module.exports = { conn }
