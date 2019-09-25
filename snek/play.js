@@ -1,5 +1,6 @@
-const net = require('net');
+//const net = require('net');
 const { connect } = require('./client');
+const { setupInput } = require('./input.js');
 
 /**
  * Establishes connection with the game server
@@ -8,21 +9,8 @@ const { connect } = require('./client');
 console.log('Connecting ...');
 connect();
 
-const setupInput = function() {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding('utf8');
-  stdin.resume();
-  return stdin;
-};
+setupInput();
 
-const handleUserInput = function(stdin) {
-  stdin.on('data', (key) => {
-    if (key === '\u0003') {
 
-      process.exit();
-    }
-  });
-};
 
-handleUserInput(setupInput());
+//handleUserInput(setupInput());
