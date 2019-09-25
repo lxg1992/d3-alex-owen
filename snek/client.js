@@ -20,10 +20,13 @@ const connect = function () {
     console.log(data);
   });
 
+  // when the server recieves a message with 'Name: xxx' format, it knows to create a new name associated with our connection
+  conn.write('Name: OaA');
+
   // let time = 500;
   // let time2 = 500;
   // let time3 = 500;
-  // for(let i = 500; i < 100000; i+= 500){
+  // for(let i = 500; i < 100000; i+= 500) {
     
   //   setTimeout(() => {
   //     conn.write('Move: up')
@@ -31,18 +34,10 @@ const connect = function () {
   //       conn.write('Move: left')
   //       setTimeout(() => {
   //         conn.write('Move: down')
-  //       }, time3)
-  //     }, time2 += 100)
+  //       }, time3 += 100);
+  //     }, time2 += 100);
   //   }, time += 100);    
   // }
-
-  
-
-
-
-
-  // when the server recieves a message with 'Name: xxx' format, it knows to create a new name associated with our connection
-  conn.write('Name: OaA');
 
   return conn;
 };
