@@ -40,7 +40,7 @@ const handleUserInput = function(stdin,connection) {
         connection.write('Say: BAD');
         break;
       case 'o':
-        connection.write('Say: git gud');
+        connection.write('Say: git gud bud');
         break;
       
     }
