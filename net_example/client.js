@@ -1,7 +1,7 @@
 const net = require('net');
 
 const conn = net.createConnection({
-  host: 'localhost', // change to IP address
+  host: '172.46.3.255', // change to IP address
   port: 3000
 });
 
