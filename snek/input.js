@@ -31,14 +31,18 @@ const handleUserInput = function(stdin,connection) {
         connection.write('Move: left');
         break;
       case 'r':
-        connection.write('Name: YOU');
+        connection.write('Say: YOU');
         break;
       case 't':
-        connection.write('Name: ARE');
+        connection.write('Say: ARE');
         break;
       case 'y':
-        connection.write('Name: BAD');
+        connection.write('Say: BAD');
         break;
+      case 'o':
+        connection.write('Say: git gud');
+        break;
+      
     }
   });
 };
